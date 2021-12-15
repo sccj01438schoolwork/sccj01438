@@ -1,0 +1,87 @@
+Mean Stack Invoice Application
+The main aim of this project application is to come up with an invoicing system for small-scale business or even personal business invoicing services that do not necessarily need to be for a company.
+
+Qualities of this project:
+One of the objectives of this project is to ease out the process of sending invoices to your customers.
+ This application likewise enables sending of receipts and bills through the email, thus making it more simple and convenient.
+This application can support multiple registrations from users.
+It is more secure since users who have registered can use their google accounts and jwt for authentication.
+Users are able to download invoices in various formats including PDF.
+It helps users keep track of their payment methods, dates and time since it records history of all the invoices sent to a particular customer who has registered.
+
+The technologies used to create this project:
+This project has two parts, the front-end i.e Client and the back-end i.e server.
+It also has a database to manage the credentials of the registered users as well as their details.
+
+The database that has been used to create this project is MongoDB mainly because MongoDB is easier to scale compared to other database Systems.
+
+For the back-end/Server:
+    • Nodemailer has been used to enable sending invoices to the buyers through their email addresses.
+
+    • Google Auth has been used for the authentication of the registered users as they sign in into the system.
+
+    • JsonWebToken has likewise been used to create the authentication system.
+
+    • Mongoose Data modeling library has too been used in the back-end.
+
+    • Mongo-express, the admin interface of MongoDB has too been used in the back-end.
+
+    • bcryptjs has been used to enable data encryption.
+
+The front-end of this project has been created using the following technologies:
+    • React JS has been used to come up with the front-end of this project.
+
+    • Redux has been used to enable our application to behave consistently, be able to run in different environments and be easy to test.
+
+    • React router dom which has bindings that enable us to use react router in our application.
+
+    • The HTTP-Client for node.js, Axios has too been used to create the back-end.
+
+    • Apex charts have been used to display the charts for the payment history of the registered users.
+
+    • CSS modules have been used for the user interface design.
+
+
+
+​ How to configure and Set up this application:
+In order to run this project locally, simply fork and clone the repository or download as zip and unzip on your machine.
+    • Open the project in your prefered code editor. 
+    • Go to terminal -> New terminal (If you are using VS code) 
+    • Split your terminal into two (run the client on one terminal and the server on the other terminal) 
+In the first terminal
+    • cd client and create a .env file in the root of your client directory. 
+    • Supply the following credentials 
+REACT_APP_GOOGLE_CLIENT_ID =
+REACT_APP_API = http://localhost:5000
+REACT_APP_URL = http://localhost:3000
+
+To get your Google ClientID for authentication, go to the credential Page (if you are new, then create a new project first and follow the following steps;
+    • Click Create credentials > OAuth client ID. 
+    • Select the Web application type. 
+    • Name your OAuth client and click Create 
+    • Remember to provide your domain and redirect URL so that Google identifies the origin domain to which it can display the consent screen. In development, that is going to be http://localhost:3000 and http://localhost:3000/login 
+    • Copy the Client ID and assign it to the variable REACT_APP_GOOGLE_CLIENT_ID in your .env file 
+$ cd client
+$ npm install (to install client-side dependencies)
+$ npm start (to start the client)
+In the second terminal
+    • cd server and create a .env file in the root of your server directory. 
+    • Supply the following credentials 
+DB_URL =
+PORT = 5000
+SECRET =
+SMTP_HOST =
+SMTP_PORT =
+SMTP_USER =
+SMTP_PASS =
+
+Please follow This tutorial to create your mongoDB connection url, which you'll use as your DB_URL
+$ cd server
+$ npm install (to install server-side dependencies)
+& npm start (to start the server)
+​ Troubleshooting
+If you're getting error while trying to send or download PDF, please run the following in your server terminal.
+$ npm install html-pdf -g
+$ npm link html-pdf
+$ npm link phantomjs-prebuilt
+
